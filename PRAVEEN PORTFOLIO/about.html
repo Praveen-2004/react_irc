@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./images/bg2.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Praveen Kumar, originally from Chennai, and currently residing in Tiruvallur. 
+                        I completed my higher secondary education at Thangamani Matriculation Higher Secondary School in Chennai. 
+                        I am currently in my second year of bachelor's degree at Sri Krishna College of Technology in Coimbatore.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Coding</span><br>C++ Programming<br>Java Programming<br>Python programming</li>
+                                <li><span>Web Development</span><br>HTML/CSS/JS</li>
+                                <li><span>Data Base</span><br>Mysql, RDBMS</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Internship</span><br>2 months Internship on <br>Bussiness Development Trainee <br>at OmniJobs</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022-2026</span><br>BE CSE (Artificial Intelligence & Machine Learning)<br>Sri Krishna College of Technology<br>Coimbatore</li>
+                                <li><span>2021-2022</span><br>HSC II YEAR<br>Thangamani Matriculation Hr Sec School<br>Chennai</li>
+                                <li><span>2020-2021</span><br>HSC I YEAR<br>Thangamani Matriculation Hr Sec School<br>Chennai</li>
+                                <li><span>2019-2020</span><br>SSLC<br>Amutha Matriculation School<br>Tiruvallur</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fab fa-paper-plane"></i>praveenkumarv0811@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 91235 63252</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Praveen Kumar®. All rights reserved. </p>
+        </div>
+    </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+
+</script>
+
+</body>
+</html>
